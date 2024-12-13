@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do Application</h1>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+
+    <main>
+        <!-- Task Form -->
+        <form id="task-form">
+            <input type="text" id="task-name" placeholder="Task Name" required>
+            <input type="date" id="task-date" required>
+            <select id="task-priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- Search Bar -->
+        <div>
+            <input type="text" id="search-bar" placeholder="Search tasks...">
+            <button id="sort-tasks">Sort Tasks by Due Date</button>
+        </div>
+
+        <!-- Task Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Priority</th>
+                    <th>Due Date</th>
+                    <th>Completed</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="task-table">
+                <!-- Dynamic Rows Will Be Added Here -->
+            </tbody>
+        </table>
+
+        <!-- Progress Tracker -->
+        <div>
+            <label for="progress-bar">Progress: </label>
+            <progress id="progress-bar" value="0" max="100"></progress>
+            <span id="progress-percentage">0%</span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
